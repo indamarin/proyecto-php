@@ -6,10 +6,9 @@ if ($_SESSION['logincorrecto'] != 1) {
   header('Location: login.php');
 }
 
-// including the database connection file
+
 include_once("config.php");
 
-// fetching data in descending order (lastest entry first)
 $result = mysqli_query($mysqli, "SELECT id AS id_usuario, name AS nombre_usuario, age AS edad_usuario, email AS email_usuario FROM users");
 ?>
 
@@ -25,7 +24,7 @@ $result = mysqli_query($mysqli, "SELECT id AS id_usuario, name AS nombre_usuario
 
 
 
-    <!-- Bootstrap core CSS -->
+    
 <link href="../css/bootstrap.min.css" rel="stylesheet">
 
 
@@ -45,7 +44,7 @@ $result = mysqli_query($mysqli, "SELECT id AS id_usuario, name AS nombre_usuario
         }
       }
     </style>
-    <!-- Custom styles for this template -->
+    
     <link href="../css/dashboard.css" rel="stylesheet">
   </head>
   <body>

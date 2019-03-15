@@ -6,10 +6,10 @@ if ($_SESSION['logincorrecto'] != 1) {
   header('Location: login.php');
 }
 
-//Conexion a BD
+
 include_once("config.php");
 
-//Recibo Variables
+
 $nombre = $_POST['name'];
 
 if(empty($nombre) == 1){
@@ -21,7 +21,7 @@ $query= "INSERT INTO fabricante ".
         "(nombre) ".
         "VALUES (?)";
 
-    // insert data to database
+
     $stmt = mysqli_prepare($mysqli, $query);
     mysqli_stmt_bind_param($stmt, "s", $nombre);
     mysqli_stmt_execute($stmt);

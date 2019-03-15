@@ -21,7 +21,7 @@ if (!isset($_SESSION['logincorrecto'])) {
     <meta name="description" content="">
     <title>Login</title>
 
-    <!-- Bootstrap core CSS -->
+    
     <link href="../css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
 
@@ -43,7 +43,7 @@ if (!isset($_SESSION['logincorrecto'])) {
     </style>
 
 
-    <!-- Custom styles for this template -->
+ 
     <link href="../css/signin.css" rel="stylesheet">
   </head>
   <body class="text-center">

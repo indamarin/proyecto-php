@@ -6,10 +6,10 @@ if ($_SESSION['logincorrecto'] != 1) {
   header('Location: login.php');
 }
 
-// including the database connection file
+
 include_once("config.php");
 
-// fetching data in descending order (lastest entry first)
+
 $result = mysqli_query($mysqli, "SELECT codigo AS codigo_fabricante, nombre AS nombre_fabricante FROM fabricante");
 ?>
 
@@ -25,7 +25,7 @@ $result = mysqli_query($mysqli, "SELECT codigo AS codigo_fabricante, nombre AS n
 
 
 
-    <!-- Bootstrap core CSS -->
+    
 <link href="../css/bootstrap.min.css" rel="stylesheet">
 
 
@@ -45,7 +45,7 @@ $result = mysqli_query($mysqli, "SELECT codigo AS codigo_fabricante, nombre AS n
         }
       }
     </style>
-    <!-- Custom styles for this template -->
+ 
     <link href="../css/dashboard.css" rel="stylesheet">
   </head>
   <body>

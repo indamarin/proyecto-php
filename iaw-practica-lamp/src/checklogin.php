@@ -2,7 +2,6 @@
 
 session_start();
 
-//Conexion a BD
 include_once("config.php");
 
 
@@ -10,11 +9,11 @@ if (!isset($_SESSION['logincorrecto'])) {
     $_SESSION['logincorrecto'] = 0;
 }
 
-//Recibo Variables
+
 $email = $_POST["email"];
 $password = $_POST["password"];
 
-//Comprobar variables vacias
+
 if(empty($email) == 1 || empty($password) == 1){
     header('Location: login.php');
     exit;
@@ -24,7 +23,7 @@ $query= "SELECT * ".
         "FROM users ".
         "WHERE email = ? AND password = ?";
 
-	// insert data to database
+
 	$stmt = mysqli_prepare($mysqli, $query);
 	mysqli_stmt_bind_param($stmt, "ss", $email, md5($password));
     mysqli_stmt_execute($stmt);

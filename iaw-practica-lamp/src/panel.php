@@ -6,10 +6,10 @@ if ($_SESSION['logincorrecto'] != 1) {
   header('Location: login.php');
 }
 
-// including the database connection file
+
 include_once("config.php");
 
-// fetching data in descending order (lastest entry first)
+
 $result = mysqli_query($mysqli, "SELECT producto.codigo AS codigo_producto, producto.nombre AS nombre_producto, producto.precio AS precio_producto, fabricante.nombre AS nombre_fabricante, producto.imagen AS imagen FROM producto INNER JOIN fabricante ON producto.codigo_fabricante=fabricante.codigo ORDER BY producto.codigo DESC");
 ?>
 
@@ -25,7 +25,7 @@ $result = mysqli_query($mysqli, "SELECT producto.codigo AS codigo_producto, prod
 
 
 
-    <!-- Bootstrap core CSS -->
+   
 <link href="../css/bootstrap.min.css" rel="stylesheet">
 
 
@@ -45,7 +45,7 @@ $result = mysqli_query($mysqli, "SELECT producto.codigo AS codigo_producto, prod
         }
       }
     </style>
-    <!-- Custom styles for this template -->
+  
     <link href="../css/dashboard.css" rel="stylesheet">
   </head>
   <body>

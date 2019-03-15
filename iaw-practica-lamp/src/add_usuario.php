@@ -6,10 +6,10 @@ if ($_SESSION['logincorrecto'] != 1) {
   header('Location: login.php');
 }
 
-//Conexion a BD
+
 include_once("config.php");
 
-//Recibo Variables
+
 $nombre = $_POST['name'];
 $edad = $_POST['age'];
 $email = $_POST['email'];
@@ -26,7 +26,7 @@ $query= "INSERT INTO users ".
         "(name, age, email, password) ".
         "VALUES (?, ?, ?, ?)";
 
-    // insert data to database
+
     $stmt = mysqli_prepare($mysqli, $query);
     mysqli_stmt_bind_param($stmt, "siss", $nombre, $edad, $email, $contra);
     mysqli_stmt_execute($stmt);
